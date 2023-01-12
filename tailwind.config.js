@@ -9,6 +9,9 @@ module.exports = {
             backgroundImage: {
                 "warp-loop": "url('../public/space.gif')",
             },
+            fontFamily: {
+                "bakbak-one": ["'Passion One", "cursive"],
+            },
         },
     },
     plugins: [],

@@ -1,5 +1,12 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { BiChevronsDown } from "react-icons/bi";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import Transition from "./components/Transition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +19,47 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className=" -z-10 fixed top-0 bg-warp-loop bg-cover bg-center h-[100vh] w-screen"></div>
       <main>
-        <div className="flex flex-col gap-3 bg-warp-loop bg-cover bg-center h-screen justify-center px-10">
-          <p className="text-white text-8xl font-extrabold">
-            Vojtěch <span className="text-yellow-400">Kylar</span>
-          </p>
-          <h2 className="font-bold ml-2 text-white text-lg">Student</h2>
+        <div className="bg-transparent flex flex-col h-screen items-center justify-center px-10">
+          <div className="flex flex-col gap-3 items-start max-w-5xl">
+            <Transition>
+              <h1 className="max-sm:text-[15vw] text-white text-8xl font-extrabold font-Sofia uppercase">
+                Vojtěch <span className="text-yellow-400">Kylar</span>
+              </h1>
+
+              <h2 className="font-bold ml-2 text-white text-lg">Student</h2>
+
+              <div className="ml-2 flex gap-3">
+                <Link href={"https://github.com/KiskaLE"}>
+                  <FaGithubSquare size={30} className="text-white" />
+                </Link>
+                <Link
+                  href={"https://www.linkedin.com/in/vojtech-kylar-b31346230/"}
+                >
+                  <FaLinkedin size={30} className="text-white" />
+                </Link>
+              </div>
+            </Transition>
+          </div>
+          <motion.div
+            style={{ zIndex: -1 }}
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              ease: "easeOut",
+              duration: 1,
+              repeat: Infinity,
+              repeatDelay: 0.5,
+            }}
+            className="absolute h-full"
+          >
+            <Transition className="text-white absolute bottom-5 left-[-20px]">
+              <BiChevronsDown size={50} />
+            </Transition>
+          </motion.div>
         </div>
+
+        <div className="h-screen"></div>
       </main>
     </>
   );

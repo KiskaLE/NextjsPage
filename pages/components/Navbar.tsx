@@ -1,29 +1,15 @@
-import { Children, useState } from "react";
+import { useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import Link from "next/link";
-import { motion, useScroll } from "framer-motion";
 import React from "react";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
-  const [navbar, setNavbar] = useState(false);
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
-  }, []);
-
-  const changeBackground = () => {
-    if (window.screenY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
   return (
     <>
-      <motion.nav
-        style={{ backgroundColor: "black" }}
-        className={`text-white fixed left-0 top-0 h-16 flex items-center px-4 w-full bg-black `}
+      <nav
+        className={`text-white fixed left-0 top-0 h-[64px] flex items-center px-4 w-full bg-black z-50 `}
       >
         <div className="z-50">
           <HiOutlineMenu
@@ -44,7 +30,7 @@ export default function Navbar() {
             </ListLink>
           </ul>
         </Navigation>
-      </motion.nav>
+      </nav>
     </>
   );
 }

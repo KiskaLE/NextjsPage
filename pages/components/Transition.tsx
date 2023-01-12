@@ -16,7 +16,7 @@ export default function Transition({ children, className }: any) {
         transition: {
           duration: 0.5,
         },
-        zIndex: -1,
+        zIndex: 1,
       });
     } else {
       animation.start({
@@ -26,6 +26,7 @@ export default function Transition({ children, className }: any) {
         },
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   return (

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="px-10 mt-[64px]">
         <Hero />
         <About />
+        <Contact />
       </main>
     </>
   );

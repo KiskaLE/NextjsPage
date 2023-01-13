@@ -6,7 +6,7 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 export default function Hero() {
   return (
     <>
-      <section className="bg-transparent flex flex-col h-[calc(100vh-64px)] items-center justify-center px-10">
+      <section className="bg-transparent flex flex-col h-[calc(100vh-64px)] items-center justify-center px-10 select-none">
         <div className="flex flex-col gap-3 items-start max-w-5xl">
           <Transition>
             <h1 className="max-sm:text-[15vw] text-white text-8xl font-extrabold font-Sofia uppercase">

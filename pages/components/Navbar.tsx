@@ -25,9 +25,6 @@ export default function Navbar() {
             <ListLink href="/" setOpen={setOpen}>
               Home
             </ListLink>
-            <ListLink href="/contact" setOpen={setOpen}>
-              Contact
-            </ListLink>
           </ul>
         </Navigation>
       </nav>
@@ -39,7 +36,9 @@ function Navigation({ isOpen, children }: any) {
   return (
     <div
       className={`min-h-screen absolute max-md:left-0 top-0 w-[300px]  ${
-        isOpen ? "translate-x-[calc(100vw-300px)]" : "translate-x-[100vw]"
+        isOpen
+          ? "translate-x-[calc(100vw-300px)]"
+          : "translate-x-[100vw] invisible"
       } ease-in-out duration-300`}
     >
       {children}

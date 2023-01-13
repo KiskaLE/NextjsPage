@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import More from "./More";
 import Transition from "./Transition";
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
     <>
       <section
         id="about"
-        className="text-white font-bakbak-one flex flex-col items-center py-5 min-h-screen"
+        className="text-white font-bakbak-one flex flex-col items-center py-5"
       >
         <Transition>
           <h1 className="text-center uppercase font-bakbak-one font-bold text-yellow-400 text-3xl mb-5">

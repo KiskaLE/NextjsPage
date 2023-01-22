@@ -8,10 +8,10 @@ export default function Contact() {
     <>
       <section
         id="contact"
-        className="text-white font-bakbak-one flex flex-col items-center py-5"
+        className="flex flex-col items-center min-h-screen py-5 text-white font-bakbak-one"
       >
         <Transition>
-          <h1 className="text-center uppercase font-bakbak-one font-bold text-yellow-400 text-3xl mb-5">
+          <h1 className="mb-5 text-3xl font-bold text-center text-yellow-400 uppercase font-bakbak-one">
             Contact
           </h1>
           <ul className="grid gap-2">

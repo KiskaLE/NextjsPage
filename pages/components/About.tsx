@@ -7,12 +7,12 @@ export default function About() {
     <>
       <section
         id="about"
-        className="text-white font-bakbak-one flex flex-col items-center py-5"
+        className="flex flex-col items-center gap-5 py-5 text-white font-bakbak-one"
       >
         <Transition>
-          <h1 className="text-center uppercase font-bakbak-one font-bold text-yellow-400 text-3xl mb-5">
+          <h2 className="mb-5 text-3xl font-bold text-center text-yellow-400 uppercase font-bakbak-one">
             About
-          </h1>
+          </h2>
           <p className="text-justify max-w-[500px]">
             I'm studying at the{" "}
             <a className="text-yellow-400" href="https://www.spse.cz/">

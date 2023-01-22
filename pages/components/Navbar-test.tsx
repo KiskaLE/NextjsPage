@@ -11,7 +11,7 @@ const links = [
 export default function Navbar() {
   return (
     <>
-      <nav className="flex flex-col fixed text-white left-0 top-0 justify-center px-4 pt-3 w-full bg-black z-50 ">
+      <nav className="fixed top-0 left-0 z-50 flex flex-col justify-center w-full px-4 pt-3 text-white bg-black ">
         <Menu>
           <Menu.Button>
             <HiOutlineMenu className="text-white" size={40} />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import Link from "next/link";
 import React from "react";
+import Portfolio from "../portfolio";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -25,6 +26,9 @@ export default function Navbar() {
             <ListLink href="/" setOpen={setOpen}>
               Home
             </ListLink>
+            <ListLink href="/portfolio" setOpen={setOpen}>
+              Portfolio
+            </ListLink>
           </ul>
         </Navigation>
       </nav>
@@ -35,7 +39,7 @@ export default function Navbar() {
 function Navigation({ isOpen, children }: any) {
   return (
     <div
-      className={`min-h-screen absolute max-md:left-0 top-0 w-[300px]  ${
+      className={`min-h-screen pt-14 absolute max-md:left-0 top-0 w-[300px]  ${
         isOpen
           ? "translate-x-[calc(100vw-300px)]"
           : "translate-x-[100vw] invisible"
@@ -48,7 +52,7 @@ function Navigation({ isOpen, children }: any) {
 function ListLink({ children, href, setOpen }: any) {
   return (
     <Link
-      className="text-4xl font-extrabold font-serif flex justify-center hover:text-white"
+      className="flex justify-center font-serif text-4xl font-extrabold hover:text-white"
       href={href}
       onClick={() => setOpen(false)}
     >
